@@ -45,12 +45,16 @@ This repository features an interactive fractal explorer built with [Electron](h
 
 ### Mandelbrot Set
 
-The Mandelbrot set is defined in the complex plane. For each complex number \( c \), we iterate:
-\[
+For each complex number `c`, we iterate:
+```
 z_{n+1} = z_n^2 + c
-\]
-starting from \( z_0 = 0 \). If \( |z_n| \) (the magnitude of \( z_n \)) never exceeds 2 for all iterations (up to a chosen limit), \( c \) belongs to the Mandelbrot set.
+```
+starting from `z_0 = 0`. If the magnitude of `z_n` never exceeds 2 for all iterations (up to a chosen limit), that point `c` belongs to the Mandelbrot set.
 
 ### Julia Set
 
-A Julia set is generated using the same iterative process, but \( c \) is fixed while different initial \( z_0 \) values in the plane are tested. Each point \( z \) that does not diverge for the chosen number of iterations is part of that specific Julia set. Changing \( c \) can drastically alter the shape of the set.
+A Julia set is generated using the same iterative formula, but `c` is fixed while different initial values `z_0` in the complex plane are tested:
+```
+z_{n+1} = z_n^2 + c
+```
+Any `z_0` that does not diverge (exceed a certain magnitude) for the given iteration count is part of that specific Julia set. Changing the constant `c` produces different Julia sets.
